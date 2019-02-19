@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	 <!-- <bean id="tv" class="day1_04_3setter_injection.SamsungTV">
+	 	setter 인젝션을 위한 태그 추가...
+	 	name 속성값은 setter의 이름과 매핑된다...
+	 	<property name="speaker" ref="apple"></property>
+	 	<property name="price" value="2700000"></property>
+	 </bean> -->
+	 
+	 <!-- namespace 를 이용한 setter 주입.. -->
+	 <bean id="tv" class="day1._04._3setter_injection.SamsungTV"
+	 			p:speaker-ref="sony" p:price="2700000"/>  
+	 
+	 <!-- ref ="sony" 에 대한 bean 생성.. -->
+	 <bean id="sony" class="day1._04._2constructor_injection.SonySpeaker"></bean>
+	 
+	 <bean id="apple" class="day1._04._2constructor_injection.AppleSpeaker"></bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	 <bean name="tv" class="day1._04._2constructor_injection.SamsungTV">
+	 	<!-- 생성자 인젝션을 위한 태그 추가... -->
+	 	<!-- <constructor-arg ref="sony"></constructor-arg> -->
+	 	<constructor-arg ref="apple"></constructor-arg>
+	 	<!-- 생성자에 넘길 매개변수가 여러개일때는..태그를 그 수만큼 추가한다! 
+	 		bean 객체 아닐때는 value..-->
+	 	<constructor-arg value="2700000"></constructor-arg>
+	 </bean>
+	 
+	 <!-- ref ="sony" 에 대한 bean 생성.. -->
+	 <bean id="sony" class="day1._04._2constructor_injection.SonySpeaker"></bean>
+	 
+	 <bean id="apple" class="day1._04._2constructor_injection.AppleSpeaker"></bean>
+</beans>
