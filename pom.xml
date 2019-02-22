@@ -116,6 +116,14 @@
 			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>        
+		
+		<!-- oracle에서 제공하는 jdbc 드라이버 다운..데이터베이스 연결..
+			이거 후에 ojdbc6  따로 클래스 패스에 연결해야 함! -->
+		<dependency>
+	      <groupId>com.oracle</groupId>
+	      <artifactId>ojdbc6</artifactId>
+	      <version>11.2.0</version>
+	    </dependency>
 	</dependencies>
     <build>
         <plugins>
